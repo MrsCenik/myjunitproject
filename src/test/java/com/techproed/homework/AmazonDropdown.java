@@ -1,4 +1,4 @@
-package com.techproed;
+package com.techproed.homework;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.apache.hc.client5.http.auth.AuthStateCacheable;

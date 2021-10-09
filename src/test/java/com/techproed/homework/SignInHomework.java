@@ -1,4 +1,4 @@
-package com.techproed;
+package com.techproed.homework;
 
 import com.github.javafaker.Faker;
 import io.github.bonigarcia.wdm.WebDriverManager;

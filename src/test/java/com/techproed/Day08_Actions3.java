@@ -1,5 +1,6 @@
 package com.techproed;
 
+import com.techproed.utilities.TestBase;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.After;
 import org.junit.Before;
@@ -13,7 +14,7 @@ import org.openqa.selenium.interactions.Actions;
 
 import java.util.concurrent.TimeUnit;
 
-public class Day08_Actions3 {
+public class Day08_Actions3 extends TestBase {
     /*
         Create a class: Actions3
         Create test method : keysUpDown()
@@ -21,15 +22,15 @@ public class Day08_Actions3 {
         Send iPhone X prices => convert small letter capital vice versa.
         Highlight the search box by double clicking
      */
-    WebDriver driver;
-    @Before
-    public void setUp(){
-        WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
-        driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
-        driver.manage().window().maximize();
-        driver.get("https://www.google.com/");
-    }
+//    WebDriver driver;
+//    @Before
+//    public void setUp(){
+//        WebDriverManager.chromedriver().setup();
+//        driver = new ChromeDriver();
+//        driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+//        driver.manage().window().maximize();
+//        driver.get("https://www.google.com/");
+//    }
     @Test
     public void keysUpDown(){
        WebElement searchBox= driver.findElement(By.xpath("//input[@name='q']"));
@@ -42,9 +43,9 @@ public class Day08_Actions3 {
                 .sendKeys(" too expensive"+ Keys.ENTER) //type on lowercase in the element
                 .perform();
     }
-    @After
-    public void tearDown() {
-//        driver.close(); //closes only active driver
-        driver.quit(); //closes all open drivers
-    }
+//    @After
+//    public void tearDown() {
+////        driver.close(); //closes only active driver
+//        driver.quit(); //closes all open drivers
+//    }
 }

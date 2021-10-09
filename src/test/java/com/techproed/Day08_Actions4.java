@@ -1,5 +1,6 @@
 package com.techproed;
 
+import com.techproed.utilities.TestBase;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.*;
 import org.openqa.selenium.Keys;
@@ -16,18 +17,19 @@ import java.util.concurrent.TimeUnit;
         Scroll the page up
          */
 
-public class Day08_Actions4 {
-    WebDriver driver;
-    @Before
-    public void setUp() {
-        WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
-        driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
-        driver.manage().window().maximize();
-        driver.get("https://www.amazon.com/");
-    }
+public class Day08_Actions4 extends TestBase {
+//    WebDriver driver;
+//    @Before
+//    public void setUp() {
+//        WebDriverManager.chromedriver().setup();
+//        driver = new ChromeDriver();
+//        driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+//        driver.manage().window().maximize();
+//
+//    }
     @Test
     public void scrollUpDown() throws InterruptedException {
+        driver.get("https://www.amazon.com/");
         Actions actions = new Actions(driver);
         /*
         PAGE_DOWN ==> scroll down the page
@@ -50,9 +52,9 @@ public class Day08_Actions4 {
         /*ARROW_UP moves the page up a little bit*/
         actions.sendKeys(Keys.ARROW_UP).perform();
     }
-    @After
-    public void tearDown() {
-//        driver.close(); //closes only active driver
-        driver.quit(); //closes all open drivers
-    }
+//    @After
+//    public void tearDown() {
+////        driver.close(); //closes only active driver
+//        driver.quit(); //closes all open drivers
+//    }
 }
