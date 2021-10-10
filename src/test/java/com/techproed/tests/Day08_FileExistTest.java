@@ -22,7 +22,7 @@ public class Day08_FileExistTest{
         With Java we can check if a file exist in our local computer
 
          */
-       String homePath = System.getProperty("user.home");//Users/ismailcenik
+        String homePath = System.getProperty("user.home");//Users/ismailcenik
         String pathOfFlower = homePath+"/Desktop/flower.jpeg";
         System.out.println(pathOfFlower);
 
