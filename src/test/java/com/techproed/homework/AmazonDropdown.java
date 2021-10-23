@@ -1,7 +1,6 @@
 package com.techproed.homework;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
-import org.apache.hc.client5.http.auth.AuthStateCacheable;
 import org.junit.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
